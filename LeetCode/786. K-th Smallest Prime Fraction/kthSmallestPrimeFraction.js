@@ -94,4 +94,4 @@ var kthSmallestPrimeFraction = function(arr, k) {
 */
 
 //? Time Complexity:
-// O(n log W) 
+// O(n log W) where n is the length of the array and W is the maximum value in the array

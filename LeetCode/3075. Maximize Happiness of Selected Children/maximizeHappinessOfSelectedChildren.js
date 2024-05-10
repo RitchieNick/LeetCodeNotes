@@ -78,4 +78,4 @@ var maximumHappinessSum = function(happiness, k) {
 */
 
 //? Time Complexity:
-// O(nlogn) - Sorting the happiness values
+// O(nlogn) - Sorting the happiness values in descending order

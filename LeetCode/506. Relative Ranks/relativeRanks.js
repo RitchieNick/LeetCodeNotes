@@ -79,4 +79,4 @@ var findRelativeRanks = function(score) {
 */
 
 //? Time Complexity:
-// Linear Time Complexity: O(n)
+// Linear Time Complexity: O(n) where n is the number of athletes
