@@ -20,7 +20,7 @@
 		"scope": "javascript",
 		"prefix": "leetcode",
 		"body": [
-			"//? Date: ${1:DD/MM/YYYY}",
+			"//? Date: ${1:MM/DD/YYYY}",
 			"",
 			"//? Major Concepts: ${2:Concepts}",
 			"",
