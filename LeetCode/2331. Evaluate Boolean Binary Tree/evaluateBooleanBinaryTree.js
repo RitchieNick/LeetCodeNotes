@@ -57,13 +57,43 @@ function TreeNode(val, left, right) {
  * @return {boolean}
  */
 var evaluateTree = function(root) {
-    
+    // Base case: if the node is a leaf, return its value (0 for false, 1 for true)
+    if (root.left === null && root.right === null) {
+        return root.val === 1;
+    }
+
+    // Recursively evaluate left and right subtrees
+    const leftVal = evaluateTree(root.left);
+    const rightVal = evaluateTree(root.right);
+
+    // Apply the boolean operation based on the current node's value
+    if (root.val === 2) { // OR operation
+        return leftVal || rightVal;
+    } else if (root.val === 3) { // AND operation
+        return leftVal && rightVal;
+    }
+
+    // In case of invalid input (this should not happen given the constraints), return false
+    return false;
 };
 
 //? Explanation:
 /*
-Explanation
+    - The problem is asking us to evaluate a boolean binary tree
+    - The tree is a full binary tree
+    - The tree has leaf nodes that have either 0 or 1
+    - The tree has non-leaf nodes that have either 2 or 3
+    - The evaluation of a node is as follows:
+        - If the node is a leaf node, the evaluation is the value of the node, i.e. True or False.
+        - Otherwise, evaluate the node's two children and apply the boolean operation of its value with the children's evaluations.
+    - Return the boolean result of evaluating the root node.
+    - The function takes in the root node of the tree as an argument
+    - The function will return a boolean value
+    - The function will recursively evaluate the left and right subtrees
+    - The function will apply the boolean operation based on the current node's value
+    - The function will return false in case of invalid input
+    - The function will return the boolean result of evaluating the root node
 */
 
 //? Time Complexity:
-// Time Complexity
+// The time complexity is O(n) because we are visiting each node in the tree once
